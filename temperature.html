@@ -8,11 +8,18 @@
             var fTemperature;
             
             document.writeln("<h1>溫度轉換(°C->°F)</h1>");
+            
             cTemperature = window.prompt("請輸入攝氏溫度:","");
-            fTemperature = cTemperature * 9 / 5 + 32;
+            fTemperature = temperatureTransform(cTemperature);
+            
             document.writeln("<p>攝氏:" + cTemperature + "°C</p>");
             document.writeln("<p>華氏:" + fTemperature + "°F</p>");
             
+            function temperatureTransform(cTemp)
+            {
+                fTemp = cTemp * 9 / 5 + 32;
+                return fTemp;
+            }
             
         </script>
     </head>
